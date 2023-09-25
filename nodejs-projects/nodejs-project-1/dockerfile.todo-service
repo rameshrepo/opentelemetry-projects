@@ -1,0 +1,10 @@
+FROM node:16.13.2
+
+WORKDIR /usr/src/app
+
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+EXPOSE 8080
+
+# CMD ["yarn","todo"]
+CMD ["/usr/src/app/entrypoint.sh", "todo"]
